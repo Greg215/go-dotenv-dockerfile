@@ -5,7 +5,7 @@ Best to describe it is to show example.
 
 First of all our files, first `Dockerfile.env` that will be our template:
 
-```
+```Dockerfile
 FROM node:10.17.0 AS build-env
 WORKDIR /opt/app
 COPY package*.json ./
@@ -33,7 +33,7 @@ PORT='8080'
 Now we will run our command. By default it use files with names as we have here and produce `Dockerfile`.
 Output will look like:
 
-```
+```Dockerfile
 FROM node:10.17.0 AS build-env
 WORKDIR /opt/app
 COPY package*.json ./
@@ -54,7 +54,7 @@ CMD ["app.js"]
 
 To configure file names let's look to help of our program:
 
-```
+```ShellSession
 Usage of ./env_to_df:
   -dockerfile-file string
         path to Dockerfile before rendering (default "Dockerfile.env")
