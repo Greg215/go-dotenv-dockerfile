@@ -22,4 +22,4 @@ jobs:
         # Docker Image name
         image-name: dotenv2dockerfile
         # Docker Image tag
-        extract-git-tag: true
+        image-tag: latest
