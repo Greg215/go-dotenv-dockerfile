@@ -1,4 +1,6 @@
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/kivio/go-dotenv-dockerfile) 
+![Release Build](https://github.com/kivio/go-dotenv-dockerfile/workflows/Go/badge.svg?branch=master)
+![Docker Build](https://github.com/kivio/go-dotenv-dockerfile/workflows/Docker%20Image%20CI/badge.svg?branch=master)
 
 ## How to ##
 
