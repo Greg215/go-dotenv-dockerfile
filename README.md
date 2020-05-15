@@ -3,7 +3,7 @@
 ## How to ##
 
 This simple command line will provide you option for render DOTENV with source from .env file.
-Best to describe it is to show example.
+Best to describe it is to show example - files for this example you can find in example directory.
 
 First of all our files, first `Dockerfile.env` that will be our template:
 
@@ -65,3 +65,10 @@ Usage of ./env_to_df:
   -output string
         path to output Dockerfile (default "Dockerfile")
 ```
+
+## How Docker image works ##
+
+To work with this tool as container (usage - as step for dockerized CI/CD) you need to mount few things:
+* first of all file with dotenv configuration
+* second file with Dockerfile template
+* and last one - volume where you output should be produced

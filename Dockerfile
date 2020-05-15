@@ -1,16 +1,12 @@
-FROM node:10.17.0 AS build-env
-WORKDIR /opt/app
-COPY package*.json ./
-RUN npm install
-COPY . .
+FROM golang:1.13-buster as build
 
-FROM gcr.io/distroless/nodejs
-COPY --from=build-env /opt/app /opt/app
-WORKDIR /opt/app
-EXPOSE 8080
+WORKDIR /go/src/
+COPY env_to_df.go /go/src
 
-ENV SERVICE_NAME my-nodejs-app
-ENV SERVICE_CONF config.app
-ENV PORT 8080
+RUN go get -d -v ./...
 
-CMD ["app.js"]
+RUN go build -o /go/bin/env_to_df
+
+FROM gcr.io/distroless/base-debian10
+COPY --from=build /go/bin/env_to_df /
+CMD ["/env_to_df"]
