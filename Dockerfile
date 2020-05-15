@@ -5,8 +5,8 @@ COPY env_to_df.go /go/src
 
 RUN go get -d -v ./...
 
-RUN go build -o /go/bin/env_to_df
+RUN go build -o /go/bin/dotenv2dockerfile
 
 FROM gcr.io/distroless/base-debian10
-COPY --from=build /go/bin/env_to_df /
-CMD ["/env_to_df"]
+COPY --from=build /go/bin/dotenv2dockerfile /
+CMD ["/dotenv2dockerfile"]
