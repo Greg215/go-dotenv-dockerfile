@@ -59,7 +59,7 @@ CMD ["app.js"]
 To configure file names let's look to help of our program:
 
 ```ShellSession
-Usage of ./env_to_df:
+Usage of ./dotenv2dockerfile:
   -dockerfile-file string
         path to Dockerfile before rendering (default "Dockerfile.env")
   -dotenv-file string
