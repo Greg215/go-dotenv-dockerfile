@@ -1,3 +1,5 @@
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/kivio/go-dotenv-dockerfile) 
+
 ## How to ##
 
 This simple command line will provide you option for render DOTENV with source from .env file.
