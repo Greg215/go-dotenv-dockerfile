@@ -1,4 +1,4 @@
-FROM golang:1.15.2-alpine as build
+FROM golang:1.15.2 as build
 
 WORKDIR /go/src/
 COPY env_to_df.go /go/src
