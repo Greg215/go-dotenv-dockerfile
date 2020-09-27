@@ -1,4 +1,4 @@
-FROM golang:1.14-stretch as build
+FROM golang:1.15.2-buster as build
 
 WORKDIR /go/src/
 COPY env_to_df.go /go/src
